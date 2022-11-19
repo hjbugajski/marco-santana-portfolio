@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
+
+import styles from './page.module.scss';
 
 export default function Home() {
   return (
@@ -10,8 +11,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
+          Get started by editing <code className={styles.code}>app/page.tsx</code>
         </p>
 
         <div className={styles.grid}>
@@ -20,10 +20,7 @@ export default function Home() {
             <p>Find in-depth information about Next.js 13</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
+          <a href="https://github.com/vercel/next.js/tree/canary/examples" className={styles.card}>
             <h2>Examples &rarr;</h2>
             <p>Explore the Next.js 13 playground.</p>
           </a>
@@ -53,5 +50,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
