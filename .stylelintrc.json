@@ -1,0 +1,8 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-rational-order-fix", "stylelint-config-prettier"],
+  "rules": {
+    "max-nesting-depth": null,
+    "order/properties-alphabetical-order": null,
+    "scss/dollar-variable-empty-line-before": null
+  }
+}
