@@ -1,0 +1,135 @@
+@use 'sass:map';
+
+$black: #000;
+$black-alpha: #00000095;
+$white: #fff;
+$white-alpha: #ffffff95;
+
+$amber-0: #fffbeb;
+$amber-1: #fef3c7;
+$amber-2: #fde68a;
+$amber-3: #fcd34d;
+$amber-4: #fbbf24;
+$amber-5: #f59e0b;
+$amber-6: #d97706;
+$amber-7: #b45309;
+$amber-8: #92400e;
+$amber-9: #78350f;
+$amber-alpha-5: #f59e0b95;
+$amber-alpha-7: #b4530995;
+
+$emerald-0: #ecfdf5;
+$emerald-1: #d1fae5;
+$emerald-2: #a7f3d0;
+$emerald-3: #6ee7b7;
+$emerald-4: #34d399;
+$emerald-5: #10b981;
+$emerald-6: #059669;
+$emerald-7: #047857;
+$emerald-8: #065f46;
+$emerald-9: #064e3b;
+$emerald-alpha-5: #10b98195;
+$emerald-alpha-7: #04785795;
+
+$red-0: #fef2f2;
+$red-1: #fee2e2;
+$red-2: #fecaca;
+$red-3: #fca5a5;
+$red-4: #f87171;
+$red-5: #ef4444;
+$red-6: #dc2626;
+$red-7: #b91c1c;
+$red-8: #991b1b;
+$red-9: #7f1d1d;
+$red-alpha-5: #ef444495;
+$red-alpha-7: #b91c1c95;
+
+$sky-0: #f0f9ff;
+$sky-1: #e0f2fe;
+$sky-2: #bae6fd;
+$sky-3: #7dd3fc;
+$sky-4: #38bdf8;
+$sky-5: #0ea5e9;
+$sky-6: #0284c7;
+$sky-7: #0369a1;
+$sky-8: #075985;
+$sky-9: #0c4a6e;
+$sky-alpha-5: #0ea5e995;
+$sky-alpha-7: #0369a195;
+
+$teal-0: #f0fdfa;
+$teal-1: #ccfbf1;
+$teal-2: #99f6e4;
+$teal-3: #5eead4;
+$teal-4: #2dd4bf;
+$teal-5: #14b8a6;
+$teal-6: #0d9488;
+$teal-7: #0f766e;
+$teal-8: #115e59;
+$teal-9: #134e4a;
+$teal-alpha-5: #14b8a695;
+$teal-alpha-7: #0f766e95;
+
+$zinc-0: #fafafa;
+$zinc-1: #f4f4f5;
+$zinc-2: #e4e4e7;
+$zinc-3: #d4d4d8;
+$zinc-4: #a1a1aa;
+$zinc-5: #71717a;
+$zinc-6: #52525b;
+$zinc-7: #3f3f46;
+$zinc-8: #27272a;
+$zinc-9: #18181b;
+$zinc-alpha-5: #71717a95;
+$zinc-alpha-7: #3f3f4695;
+
+$ms-palette: (
+  attention: var(--color-attention),
+  border: var(--color-border),
+  canvas-alt: var(--color-canvas-alt),
+  canvas-inset: var(--color-canvas-inset),
+  canvas: var(--color-canvas),
+  danger: var(--color-danger),
+  disabled: var(--color-disabled),
+  foreground: var(--color-foreground),
+  hover: var(--color-hover),
+  info: var(--color-info),
+  muted: var(--color-muted),
+  neutral: var(--color-neutral),
+  primary: var(--color-primary),
+  success: var(--color-success),
+  alpha: (
+    attention: var(--color-alpha-attention),
+    border: var(--color-alpha-border),
+    danger: var(--color-alpha-danger),
+    info: var(--color-alpha-info),
+    neutral: var(--color-alpha-neutral),
+    primary: var(--color-alpha-primary),
+    success: var(--color-alpha-success)
+  ),
+  contrast: (
+    attention: var(--color-contrast-attention),
+    border: var(--color-contrast-border),
+    canvas-alt: var(--color-contrast-canvas-alt),
+    canvas-inset: var(--color-contrast-canvas-inset),
+    canvas: var(--color-contrast-canvas),
+    danger: var(--color-contrast-danger),
+    disabled: var(--color-contrast-disabled),
+    foreground: var(--color-contrast-foreground),
+    hover: var(--color-contrast-hover),
+    info: var(--color-contrast-info),
+    muted: var(--color-contrast-muted),
+    neutral: var(--color-contrast-neutral),
+    primary: var(--color-contrast-primary),
+    success: var(--color-contrast-success)
+  )
+);
+$ms-palette-core-keys: (
+  attention: map.get($ms-palette, attention),
+  border: map.get($ms-palette, border),
+  danger: map.get($ms-palette, danger),
+  info: map.get($ms-palette, info),
+  neutral: map.get($ms-palette, neutral),
+  primary: map.get($ms-palette, primary),
+  success: map.get($ms-palette, success)
+);
