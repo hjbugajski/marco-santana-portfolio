@@ -1,0 +1,191 @@
+@use 'sass:map';
+@use '~scss/colors';
+@use '~scss/variables';
+
+.ms-button {
+  box-sizing: border-box;
+  width: fit-content;
+  height: 36px;
+  padding: 0 12px;
+  background-color: map.get(colors.$ms-palette, canvas-alt);
+  border: 2px solid transparent;
+  transition: ease-in-out 225ms;
+  transition-property: background-color, color, box-shadow, border-color;
+
+  &,
+  .ms-button-text {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    color: map.get(colors.$ms-palette, foreground);
+    font-weight: variables.$font-weight-semi-bold;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  svg,
+  .ms-button-icon {
+    width: 14px;
+    height: 14px;
+    color: inherit;
+  }
+
+  &.ms-large-button {
+    height: 48px;
+    padding: 0 24px;
+
+    &,
+    .ms-button-text {
+      font-size: 18px;
+    }
+
+    svg,
+    .ms-button-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &.ms-icon-button {
+    width: 36px;
+    padding: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.ms-ghost-button {
+    color: map.get(colors.$ms-palette, foreground);
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &.ms-outline-button {
+    background-color: transparent;
+    border: 2px solid map.get(colors.$ms-palette, border);
+  }
+
+  @each $key in map.keys(colors.$ms-palette-core-keys) {
+    &.ms-flat-button.ms-#{$key}-button {
+      color: map.get(colors.$ms-palette, contrast, $key);
+      background-color: map.get(colors.$ms-palette, $key);
+    }
+
+    &.ms-ghost-button.ms-#{$key}-button,
+    &.ms-outline-button.ms-#{$key}-button {
+      color: map.get(colors.$ms-palette, $key);
+    }
+
+    &.ms-outline-button.ms-#{$key}-button {
+      border-color: map.get(colors.$ms-palette, $key);
+    }
+  }
+}
+
+.ms-link-button {
+  text-decoration: none;
+}
+
+.ms-button:focus {
+  outline: 2px solid map.get(colors.$ms-palette, alpha, border);
+  transition-property: background-color, color, box-shadow, border-color;
+
+  @each $key in map.keys(colors.$ms-palette-core-keys) {
+    &.ms-#{$key}-button {
+      outline-color: map.get(colors.$ms-palette, alpha, $key);
+    }
+  }
+}
+
+.ms-button.ms-active-button:not(.ms-disabled-button),
+.ms-button:hover:not(.ms-disabled-button) {
+  cursor: pointer;
+  transition: ease-in-out 225ms;
+  transition-property: background-color, color, box-shadow, border-color;
+
+  &:not(.ms-icon-button, .ms-link-button.ms-ghost-button, .ms-active-button) {
+    box-shadow: 4px 4px map.get(colors.$ms-palette, border);
+  }
+
+  &.ms-ghost-button,
+  &.ms-outline-button {
+    background-color: map.get(colors.$ms-palette, canvas-alt);
+  }
+
+  &.ms-outline-button {
+    border: 2px solid map.get(colors.$ms-palette, border);
+  }
+
+  @each $key in map.keys(colors.$ms-palette-core-keys) {
+    &.ms-#{$key}-button {
+      background-color: map.get(colors.$ms-palette, $key);
+
+      &,
+      .ms-button-text {
+        color: map.get(colors.$ms-palette, contrast, $key);
+      }
+    }
+  }
+}
+
+.ms-active-button:hover {
+  box-shadow: 4px 4px map.get(colors.$ms-palette, border);
+}
+
+.ms-instagram-button {
+  z-index: 1;
+  transition: 225ms ease-in-out;
+  transition-property: background box-shadow color opacity;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #f09433;
+    opacity: 0;
+    transition: 225ms ease-in-out;
+    transition-property: background box-shadow color opacity;
+    content: '';
+  }
+
+  &:nth-of-type(1)::before {
+    background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  }
+
+  &:nth-of-type(2)::before {
+    background: linear-gradient(-135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  }
+
+  &:nth-of-type(3)::before {
+    background: linear-gradient(-45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  }
+
+  &:hover {
+    border-color: map.get(colors.$ms-palette, border);
+    box-shadow: 4px 4px map.get(colors.$ms-palette, border);
+    transition: 225ms ease-in-out;
+    transition-property: background box-shadow color opacity;
+
+    &,
+    .ms-button-text {
+      color: colors.$white;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.ms-disabled-button {
+  color: map.get(colors.$ms-palette, contrast, disabled) !important;
+  background-color: map.get(colors.$ms-palette, disabled) !important;
+  border-color: map.get(colors.$ms-palette, contrast, disabled) !important;
+  cursor: not-allowed !important;
+}
