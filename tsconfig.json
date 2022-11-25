@@ -18,7 +18,19 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "~assets": ["./src/assets"],
+      "~assets/*": ["./src/assets/*"],
+      "~components/*": ["./src/components/*"],
+      "~graphql": ["./src/graphql"],
+      "~graphql/*": ["./src/graphql/*"],
+      "~interfaces": ["./src/interfaces"],
+      "~interfaces/*": ["./src/interfaces/*"],
+      "~scss/*": ["./src/scss/*"],
+      "~utilities": ["./src/utilities"],
+      "~utilities/*": ["./src/utilities/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
