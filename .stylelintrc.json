@@ -3,6 +3,8 @@
   "rules": {
     "max-nesting-depth": null,
     "order/properties-alphabetical-order": null,
-    "scss/dollar-variable-empty-line-before": null
+    "scss/dollar-variable-empty-line-before": null,
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
   }
 }
