@@ -38,6 +38,13 @@ export const PHOTO_SECTION = `
       url
       width
       height
+      sizes {
+        preview {
+          width
+          height
+          url
+        }
+      }
     }
     scrollContainer
     showPageLink

@@ -35,9 +35,9 @@ export default function PhotoSectionBlock({ block }: PhotoSectionBlockProps) {
           <Image
             key={i}
             alt={m.alt}
-            src={PAYLOAD_URL! + m.url}
-            width={m.width}
-            height={m.height}
+            src={PAYLOAD_URL! + m.sizes.preview.url}
+            width={m.sizes.preview.width}
+            height={m.sizes.preview.height}
             className={classes.image}
           />
         ))}
