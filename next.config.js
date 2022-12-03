@@ -11,7 +11,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: production ? 'https' : 'http',
-        hostname: production ? 'marco-santana.com' : 'localhost',
+        hostname: production ? '**.marco-santana.com' : 'localhost',
         pathname: '/media/**'
       }
     ]
