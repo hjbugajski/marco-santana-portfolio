@@ -1,0 +1,59 @@
+.heroContainer {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.heroText {
+  margin-bottom: 64px;
+}
+
+.heroLogo {
+  max-width: 1200px;
+  margin-bottom: 16px;
+}
+
+.heroSubtitle {
+  font-size: 2rem;
+}
+
+.instagramButtonContainer {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.instagramButton {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 256px !important;
+  height: 256px !important;
+  padding: 24px !important;
+
+  svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  img {
+    margin-bottom: 16px !important;
+    border: 2px solid transparent !important;
+    border-radius: 50% !important;
+    transition: border-color ease-in-out 225ms !important;
+  }
+
+  &:hover img {
+    border-color: var(--color-border) !important;
+    transition: border-color ease-in-out 225ms !important;
+  }
+}
+
+.buttonText {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  font-size: 1.5rem !important;
+}

@@ -1,0 +1,55 @@
+@use 'sass:map';
+
+.section {
+  margin-bottom: 64px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-top: 16px;
+  border-top: 2px solid var(--color-border);
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-top: 24px;
+  }
+}
+
+.sectionTitleButton {
+  min-width: fit-content;
+}
+
+.imageScrollContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 8px 0;
+  overflow-x: scroll;
+
+  .image {
+    width: auto;
+    height: 65vh;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 16px;
+
+  .image {
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 600px) {
+      width: auto;
+      height: 55vh;
+    }
+  }
+}
