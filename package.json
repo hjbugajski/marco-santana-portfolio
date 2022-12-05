@@ -9,7 +9,11 @@
     "prepare": "husky install",
     "lint": "next lint; npm run stylelint",
     "stylelint": "stylelint '**/*.scss' --ignore-path .gitignore",
-    "prettier": "prettier --write . --ignore-unknown --ignore-path .gitignore"
+    "prettier": "prettier --write . --ignore-unknown --ignore-path .gitignore",
+    "release": "commit-and-tag-version -s",
+    "release:minor": "commit-and-tag-version -s --release-as minor",
+    "release:major": "commit-and-tag-version -s --release-as major",
+    "release:custom": "commit-and-tag-version -s --release-as"
   },
   "dependencies": {
     "@types/node": "18.11.9",
@@ -28,6 +32,7 @@
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@typescript-eslint/parser": "^5.44.0",
+    "commit-and-tag-version": "^10.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
