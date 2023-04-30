@@ -9,11 +9,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang="en">
-      <head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta name="description" content="Photography portfolio." />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body>
         <Nav navMenu={navMenu} />
         {children}

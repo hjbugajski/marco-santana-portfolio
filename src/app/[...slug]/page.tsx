@@ -27,6 +27,22 @@ export default async function Page({ params: { slug } }: PageProps) {
   }
 }
 
+export async function generateMetadata({ params }: PageProps) {
+  try {
+    const page = await fetchPage(params.slug);
+
+    return {
+      title: page.title,
+      description: 'Photography portfolio.'
+    };
+  } catch {
+    return {
+      title: undefined,
+      description: undefined
+    };
+  }
+}
+
 export async function generateStaticParams() {
   try {
     const pages = await fetchPages();
