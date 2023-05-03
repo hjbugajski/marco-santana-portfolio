@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.2](https://github.com/hjbugajski/marco-santana-portfolio/compare/v1.0.1...v1.0.2) (2023-05-03)
+
+### Bug Fixes
+
+- add flex to page container ([ed87e74](https://github.com/hjbugajski/marco-santana-portfolio/commit/ed87e7430253da5471b5a53fcd241a66e6e44aac))
+- relocate favicon ([adb0a22](https://github.com/hjbugajski/marco-santana-portfolio/commit/adb0a22c8cd49417f623e8dafbc33a2381084657))
+- remove head file in favor of generateMetadata ([7c54599](https://github.com/hjbugajski/marco-santana-portfolio/commit/7c545998d05a5653bd89cad129a5331e2d5fdedb))
+
 ## [1.0.1](https://github.com/hjbugajski/marco-santana-portfolio/compare/v1.0.0...v1.0.1) (2023-03-29)
 
 ## 1.0.0 (2022-12-05)
