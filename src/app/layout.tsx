@@ -4,6 +4,14 @@ import { fetchGlobals } from '~graphql';
 
 import '~scss/app.scss';
 
+export const metadata = {
+  title: 'marco santana',
+  description: 'Photography by Marco Santana.',
+  icons: {
+    icon: '/favicon.ico'
+  }
+};
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { navMenu } = await fetchGlobals();
 
