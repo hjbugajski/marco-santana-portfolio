@@ -27,20 +27,13 @@ export default async function Page({ params: { slug } }: PageProps) {
   }
 }
 
-export async function generateMetadata({ params }: PageProps) {
-  try {
-    const page = await fetchPage(params.slug);
+export async function generateMetadata({ params: { slug } }: { params: { slug: string[] } }) {
+  const page = await fetchPage(slug);
 
-    return {
-      title: page.title,
-      description: 'Photography portfolio.'
-    };
-  } catch {
-    return {
-      title: undefined,
-      description: undefined
-    };
-  }
+  return {
+    title: page?.title || 'marco santana',
+    description: 'Photography by Marco Santana.'
+  };
 }
 
 export async function generateStaticParams() {
