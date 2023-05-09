@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.3](https://github.com/hjbugajski/marco-santana-portfolio/compare/v1.0.2...v1.0.3) (2023-05-09)
+
+### Bug Fixes
+
+- remove header and update metadata ([575a154](https://github.com/hjbugajski/marco-santana-portfolio/commit/575a154358daaa09c171f65e54cd29d66a1f0d46))
+
 ## [1.0.2](https://github.com/hjbugajski/marco-santana-portfolio/compare/v1.0.1...v1.0.2) (2023-05-03)
 
 ### Bug Fixes
