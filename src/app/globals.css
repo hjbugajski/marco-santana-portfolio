@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *::selection {
+    @apply bg-black text-white dark:bg-white dark:text-black;
+  }
+
+  html {
+    @apply h-full bg-white font-mono lowercase text-black dark:bg-black dark:text-white;
+  }
+
+  body {
+    @apply flex h-full flex-col;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold first:mt-0 last:mb-0;
+  }
+
+  h1 {
+    @apply mb-8 mt-10 text-4xl xs:text-5xl;
+  }
+
+  h2 {
+    @apply mb-6 mt-8 text-3xl xs:text-4xl;
+  }
+
+  h3 {
+    @apply mb-4 mt-6 text-2xl xs:text-3xl;
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  .ms-instagram-button::before {
+    background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  }
+
+  .ms-instagram-button {
+    @apply relative z-[1] flex w-48 flex-col items-center justify-center gap-4 border-2 border-transparent py-4 text-lg text-black transition-all duration-[225ms] ease-in-out before:absolute before:inset-0 before:z-[-1] before:bg-[#f09433] before:opacity-0 before:transition-all before:duration-[225ms] before:ease-in-out before:content-[''] hover:border-black hover:text-white hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] hover:before:opacity-100 dark:text-white hover:dark:border-white hover:dark:shadow-[4px_4px_0px_0px_rgba(255,255,255)] md:w-64 md:py-8 md:text-xl;
+  }
+}

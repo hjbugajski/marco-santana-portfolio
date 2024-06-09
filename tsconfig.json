@@ -5,11 +5,10 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -20,16 +19,7 @@
       }
     ],
     "paths": {
-      "~assets": ["./src/assets"],
-      "~assets/*": ["./src/assets/*"],
-      "~components/*": ["./src/components/*"],
-      "~graphql": ["./src/graphql"],
-      "~graphql/*": ["./src/graphql/*"],
-      "~interfaces": ["./src/interfaces"],
-      "~interfaces/*": ["./src/interfaces/*"],
-      "~scss/*": ["./src/scss/*"],
-      "~utilities": ["./src/utilities"],
-      "~utilities/*": ["./src/utilities/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -1,10 +1,13 @@
 {
-  "extends": ["stylelint-config-standard-scss", "stylelint-config-rational-order-fix"],
+  "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
   "rules": {
-    "max-nesting-depth": null,
-    "order/properties-alphabetical-order": null,
-    "scss/dollar-variable-empty-line-before": null,
-    "selector-class-pattern": null,
-    "no-descending-specificity": null
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["apply", "layer", "responsive", "screen", "tailwind", "variants"]
+      }
+    ],
+    "no-descending-specificity": null,
+    "selector-class-pattern": null
   }
 }

@@ -1,18 +1,17 @@
-import { BlocksProps } from '~interfaces';
+import { PayloadBlockGallery, PayloadBlockHero, PayloadBlockSection } from '@/lib/types/payload';
 
-import ContentBlock from './ContentBlock';
-import HomeBlock from './HomeBlock';
-import PhotoSectionBlock from './PhotoSectionBlock';
+import BlockGallery from './gallery';
+import BlockHero from './hero';
+import BlockSection from './section';
 
 const blocks = {
-  content: ContentBlock,
-  home: HomeBlock,
-  photoSection: PhotoSectionBlock
+  gallery: BlockGallery,
+  hero: BlockHero,
+  section: BlockSection,
 };
 
-export function Blocks({ block }: BlocksProps) {
-  const RenderBlock = blocks[block.blockType];
+export function Blocks({ blockType, ...props }: PayloadBlockGallery | PayloadBlockHero | PayloadBlockSection) {
+  const RenderBlock: React.FC<any> = blocks[blockType];
 
-  // @ts-ignore
-  return RenderBlock ? <RenderBlock block={block} /> : null;
+  return RenderBlock ? <RenderBlock {...props} /> : null;
 }

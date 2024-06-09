@@ -1,24 +1,20 @@
-import Footer from '~components/Footer';
-import Nav from '~components/Nav';
-import { fetchGlobals } from '~graphql';
+import { Metadata } from 'next';
+import { Space_Grotesk } from 'next/font/google';
 
-import '~scss/app.scss';
+import './globals.css';
+import Footer from '@/components/footer';
 
-export const metadata = {
-  title: 'marco santana',
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap', variable: '--font-space-grotesk' });
+
+export const metadata: Metadata = {
+  title: 'Marco Santana',
   description: 'Photography by Marco Santana.',
-  icons: {
-    icon: '/favicon.ico'
-  }
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const { navMenu } = await fetchGlobals();
-
   return (
-    <html lang="en">
+    <html lang="en" className={spaceGrotesk.variable}>
       <body>
-        <Nav navMenu={navMenu} />
         {children}
         <Footer />
       </body>
