@@ -4,9 +4,8 @@ import { GLOBALS } from './gloabls';
 import { PAGE, PAGES } from './pages';
 
 const PAYLOAD_URL = process.env.NEXT_PUBLIC_PAYLOAD_URL + '/api/graphql';
-const NEXT_CONFIG = {
-  revalidate: 60
-};
+
+export const revalidate = 60;
 
 export const fetchGlobals = async (): Promise<{ navMenu: PayloadNavMenu | undefined }> => {
   const { data, error } = await fetch(PAYLOAD_URL, {
@@ -14,7 +13,6 @@ export const fetchGlobals = async (): Promise<{ navMenu: PayloadNavMenu | undefi
     headers: {
       'Content-Type': 'application/json'
     },
-    next: NEXT_CONFIG,
     body: JSON.stringify({
       query: GLOBALS
     })
@@ -38,7 +36,6 @@ export const fetchPage = async (segments?: string[]): Promise<PayloadPage> => {
     headers: {
       'Content-Type': 'application/json'
     },
-    next: NEXT_CONFIG,
     body: JSON.stringify({
       query: PAGE,
       variables: {
@@ -62,7 +59,6 @@ export const fetchPages = async (): Promise<Array<{ slug: string }>> => {
     headers: {
       'Content-Type': 'application/json'
     },
-    next: NEXT_CONFIG,
     body: JSON.stringify({
       query: PAGES
     })

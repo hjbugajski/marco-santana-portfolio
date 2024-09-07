@@ -4,9 +4,6 @@ const path = require('path');
 const production = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  experimental: {
-    appDir: true
-  },
   images: {
     remotePatterns: [
       {
