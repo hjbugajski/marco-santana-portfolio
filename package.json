@@ -15,6 +15,7 @@
     "release:major": "commit-and-tag-version -s --release-as major",
     "release:custom": "commit-and-tag-version -s --release-as"
   },
+  "packageManager": "pnpm@9.7.1",
   "dependencies": {
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
